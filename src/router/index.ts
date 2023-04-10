@@ -32,6 +32,12 @@ const routes: RouteRecordRaw[] = [
   },
 
   {
+    path: '/zhihu',
+    name: 'zhihu',
+    component: () => import('@/views/zhihu/index.vue'),
+  },
+
+  {
     path: '/:pathMatch(.*)*',
     name: 'notFound',
     redirect: '/404',
