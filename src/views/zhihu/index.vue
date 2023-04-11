@@ -47,8 +47,7 @@ const columns: ({ title: keyof AnswerItem | string; key: keyof AnswerItem | stri
     key: 'createAt',
     width: '200',
     render: (_) => {
-      // Compiler warns about unreachable code error
-      return `${dayjs(_.createAt).format('YYYY/MM/DD HH:mm:ss')}`
+      return `${dayjs(_.createAt as string).format('YYYY/MM/DD HH:mm:ss')}`
     },
   },
   {
